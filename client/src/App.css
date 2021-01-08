@@ -37,3 +37,22 @@
     transform: rotate(360deg);
   }
 }
+
+.home-section {
+  height: 100vh;
+}
+
+.main-section {
+  height: 100vh;
+  background-color: skyblue;
+}
+
+.about-section {
+  height: 100vh;
+  background-color: mediumpurple;
+}
+
+.contact-section {
+  height: 100vh;
+  background-color: tomato;
+}
