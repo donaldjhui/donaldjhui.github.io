@@ -10,6 +10,7 @@ export default class Home extends Component {
     constructor() {
         super();
         this.state = {
+
         };
     }
 
@@ -17,7 +18,7 @@ export default class Home extends Component {
 
     render() {
         return (
-            <div className="main container home-section" id="home">
+            <div className="main home-section outer-container" id="home">
                 <div id="left">
                     <img src={Donald} alt="Donald" />
                 </div>
@@ -28,8 +29,6 @@ export default class Home extends Component {
                     </b></h1>
                 </div>
             </div>
-
-
         )
     }
 }

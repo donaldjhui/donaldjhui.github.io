@@ -1,9 +1,22 @@
 import React, { Component } from 'react';
 
 class About extends Component {
-    state = {};
+
+    constructor() {
+        super();
+        this.state = {
+
+        };
+    }
+
     render() {
-        return <div className="about-section" id="about" />;
+        return (
+            <div className="about-section outer-container" id="about">
+                <div className="">
+
+                </div>
+            </div>
+        )
     }
 }
 

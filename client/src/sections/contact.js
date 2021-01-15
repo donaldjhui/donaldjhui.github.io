@@ -1,54 +1,66 @@
 import React, { Component } from 'react';
+import './contact.css';
 
 class Contact extends Component {
-    state = {};
+
+    constructor() {
+        super();
+        this.state = {
+            width: window.innerWidth,
+        };
+    }
+
+    componentWillMount() {
+        window.addEventListener('resize', this.handleWindowSizeChange);
+    }
+
+    // make sure to remove the listener
+    // when the component is not mounted anymore
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleWindowSizeChange);
+    }
+
+    handleWindowSizeChange = () => {
+        this.setState({ width: window.innerWidth });
+    };
+
     render() {
-        return (
 
-            <div className="contact-section footer" id="contact">
-                {/* <h2>Get in Touch</h2>
-                <div id="contact-form">
-                            <form method="POST" action="https://formspree.io/donaldjhui@gmail.com">
-                                    <input type="hidden" name="_subject" value="Contact request from personal website"></input>
-                        <input type="email" name="_replyto" placeholder="Your email" required></input>
-                        <textarea name="message" placeholder="Your message" required></textarea>
-                        <button type="submit">Send</button>
-                    </form>
-                </div>
-                <h4>Or email me at donaldjhui@gmail.com</h4>
-                <h4>510.432.8948</h4> */}
+        const { width } = this.state;
+        const isMobile = width <= 766;
 
+        if (isMobile) {
+            return (
+                <div className="contact-section outer-container" id="contact">
 
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-5 copyright">
-                            <p>
-                                Copyright &copy; 2020 Donald Hui
-                    </p>
-                        </div>
-                        <div class="col-sm-2 top">
-                            <span id="to-top">
-                                <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                            </span>
-                        </div>
-                        <div class="col-sm-5 social">
-                            <ul>
-                                <li>
-                                    <a href="https://github.com/donaldjhui" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/donald-hui/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com/donaldjhui" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                </li>
+                    <div className="p-5 socialbottom">
+                        <socialwidth><socialbar><a href="https://www.linkedin.com/in/donald-hui" target="_blank" className="fa fa-linkedin-square fa-2x" aria-hidden="true"></a></socialbar></socialwidth>
 
-                            </ul>
-                        </div>
+                        <socialwidth><socialbar><a href="https://github.com/donaldjhui" target="_blank" className="fa fa-github fa-2x" aria-hidden="true"></a></socialbar></socialwidth>
+
+                        <socialwidth><socialbar><a href="mailto:donaldjhui@gmail.com" className="fa fa-envelope fa-2x" aria-hidden="true"></a></socialbar></socialwidth>
+                    </div >
+
+                    <div className="designedby">
+                        <p>
+                            Copyright &copy; 2020 Donald Hui
+                        </p>
+
                     </div>
                 </div>
-            </div >
-        )
+            )
+        } else {
+            return (
+                <div className="contact-section outer-container" id="contact">
+                    <div className="designedby">
+                        <p>
+                            Copyright &copy; 2020 Donald Hui
+                        </p>
+
+                    </div>
+                </div>
+            )
+        }
     }
 }
 

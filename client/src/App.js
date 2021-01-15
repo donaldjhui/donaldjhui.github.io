@@ -8,27 +8,29 @@ import Orange from './images/orange.gif'
 import Apple from './images/apple.gif'
 import Strawberry from './images/strawberry.gif'
 import Pear from './images/pear.gif'
-import BJunimo from './images/blue-junimo.gif'
+import Duck from './images/duck.png'
 
 
 // Components for different pages
 import Navbar from './components/navbar'
-
 import Home from './sections/home'
-import Main from './sections/main'
 import About from './sections/about'
+import Education from './sections/education'
+import Experience from './sections/experience'
 import Contact from './sections/contact'
+import Socialbar from './components/socialbar'
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Navbar />
-        {/* <Route path="/" exact component={Home} /> */}
         <Home />
-        <Main />
         <About />
+        <Education />
+        <Experience />
         <Contact />
+        <Socialbar />
       </Router>
 
       <div>
@@ -37,12 +39,12 @@ function App() {
             0: Orange,
             1: Pear,
             2: Strawberry,
-            3: Apple,
+            3: Duck,
           }}
-          how={20} /* Pass the number of images Sky will render chosing randomly */
-          time={40} /* time of animation */
-          size={'100px'} /* size of the rendered images */
-          background={'palettedvioletred'} /* color of background */
+          how={20}
+          time={40}
+          size={'100px'}
+          background={'rgb(231, 231, 231)'}
         />
       </div>
     </div>

@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import './navbar.css';
 
 import { Link } from 'react-scroll';
 
-import classnames from "classnames";
+import classnames from 'classnames';
 
 export default class Navbar extends Component {
 
@@ -40,23 +40,20 @@ export default class Navbar extends Component {
     render() {
 
         return (
-            // <nav class="navbar navbar-expand-md navbar-dark">
+
             <nav className={classnames("navbar navbar-expand-md", { "navbar--hidden": !this.state.visible })}>
+
 
                 <div className="d-flex w-50 order-0">
 
                     <div className="color-nav shadow">
-                        {/* <Link to="/" className="grow navbar-brand">
-                            <div id="header-logo-element" href="/">
-                                <a>D</a>
-                            </div>
-                        </Link> */}
 
                         <Link activeClass="active" to="home" spy={true} smooth={true} offset={1} duration={1500} className="grow navbar-brand">
                             <div id="header-logo-element" href="/">
-                                <a>D</a>
+                                <navlabels>D</navlabels>
                             </div>
                         </Link>
+
                     </div>
 
                 </div>
@@ -67,34 +64,29 @@ export default class Navbar extends Component {
                     </span>
                 </button>
 
-                <div className="navbar-collapse collapse order-1" id="collapsingNavbar" aria-expanded="false" aria-controls="collapsingNavbar">
-                    <ul className="navbar-nav color-nav shadow">
-                        {/* <li className="nav-item">
-                            <Link to="/Projects" className="grow nav-link">
-                                <h5>Projects</h5>
-                            </Link>
-                        </li> */}
-                        <li className="nav-item">
-                            <Link activeClass="active" to="projects" spy={true} smooth={true} offset={1} duration={1500} className="grow nav-link">
-                                <h5>Projects</h5>
-                            </Link>
-                        </li>
-
-                        <li className="nav-item">
-                            <Link activeClass="active" to="main" spy={true} smooth={true} offset={1} duration={1500} className="grow nav-link">
-                                <h5>Main</h5>
-                            </Link>
-                        </li>
-
+                <div className="navbar-collapse collapse shadow color-nav order-1" id="collapsingNavbar" aria-expanded="false" aria-controls="collapsingNavbar">
+                    <ul className="navbar-nav">
                         <li className="nav-item">
                             <Link activeClass="active" to="about" spy={true} smooth={true} offset={1} duration={1500} className="grow nav-link">
-                                <h5>About</h5>
+                                <navlabels>About</navlabels>
+                            </Link>
+                        </li>
+
+                        <li className="nav-item">
+                            <Link activeClass="active" to="education" spy={true} smooth={true} offset={1} duration={1500} className="grow nav-link">
+                                <navlabels>Education</navlabels>
+                            </Link>
+                        </li>
+
+                        <li className="nav-item">
+                            <Link activeClass="active" to="experience" spy={true} smooth={true} offset={1} duration={1500} className="grow nav-link">
+                                <navlabels>Experience</navlabels>
                             </Link>
                         </li>
 
                         <li className="nav-item">
                             <Link activeClass="active" to="contact" spy={true} smooth={true} offset={1} duration={1500} className="grow nav-link">
-                                <h5>Contact</h5>
+                                <navlabels>Contact</navlabels>
                             </Link>
                         </li>
                     </ul>

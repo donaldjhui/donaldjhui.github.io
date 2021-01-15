@@ -1,0 +1,27 @@
+.social {
+    padding: 5px;
+}
+
+socialbar {
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 800;
+    overflow: hidden;
+    background: linear-gradient(to right, rgba(141, 140, 140, 0.452), rgb(133, 186, 255), rgba(105, 237, 255, 0.856) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+}
+      
+socialbar:hover {
+    background-position: 0 100%;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+}

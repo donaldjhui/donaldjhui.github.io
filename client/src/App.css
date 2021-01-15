@@ -40,19 +40,34 @@
 
 .home-section {
   height: 100vh;
-}
-
-.main-section {
-  height: 100vh;
-  background-color: skyblue;
+  /* background-color: rgb(231, 231, 231); */
 }
 
 .about-section {
   height: 100vh;
-  background-color: mediumpurple;
+  background-color: skyblue;
+}
+
+.education-section {
+  height: 100vh;
+  background-color: pink;
+}
+
+.experience-section {
+  height: 100vh;
+  background-color: rgba(3, 27, 46, 0.918);
 }
 
 .contact-section {
   height: 100vh;
   background-color: tomato;
+}
+
+.socialbar-section {
+  position: fixed;
+  top: 30em;
+}
+
+.outer-container {
+  position: relative;
 }

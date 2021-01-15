@@ -1,7 +1,7 @@
 .jumbotron {
     /* background: url('http://placekitten.com/800/500') no-repeat center center;
     background-size: cover; */
-    background-color: rgb(255, 255, 255);
+    background-color: transparent;
     padding-top: 10px;
     padding-left: 15px;
     padding-right: 5px;
@@ -27,4 +27,14 @@
   img {
     width: 50%;
     height: 50%;
+  }
+
+  .fade-in-hello {
+    animation: fade 0.9s ease-in;
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
   }
