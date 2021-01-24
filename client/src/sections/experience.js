@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { motion } from 'framer-motion'
 
 class Experience extends Component {
 
@@ -10,7 +11,8 @@ class Experience extends Component {
     }
 
     render() {
-        return <div className="experience-section outer-container" id="experience" />;
+        return <div className="experience-section outer-container" id="experience">
+        </div>
     }
 }
 

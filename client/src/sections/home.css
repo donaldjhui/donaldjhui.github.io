@@ -1,15 +1,13 @@
 .jumbotron {
-    /* background: url('http://placekitten.com/800/500') no-repeat center center;
-    background-size: cover; */
-    background-color: transparent;
-    padding-top: 10px;
-    padding-left: 15px;
-    padding-right: 5px;
-    padding-bottom: 0px;
-    display: inline-block;
+  background-color: transparent;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 5px;
+  padding-bottom: 0px;
+  display: inline-block;
 
-    margin-top: 20em;
-  }
+  margin-top: 20em;
+}
 
 #left {
   position: absolute;
@@ -22,19 +20,19 @@
   position: absolute;
   right: 0%;
   width: 50vw;
-  }
+}
 
-  img {
-    width: 50%;
-    height: 50%;
-  }
+img {
+  width: 50%;
+  height: 50%;
+}
 
-  .fade-in-hello {
-    animation: fade 0.9s ease-in;
-  }
+.fade-in-hello {
+  animation: fade 1.5s ease-in;
+}
 
-  @keyframes fade {
-    0% {
-      opacity: 0;
-    }
+@keyframes fade {
+  0% {
+    opacity: 0;
   }
+}

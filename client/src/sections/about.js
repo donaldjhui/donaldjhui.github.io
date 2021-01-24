@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { motion } from 'framer-motion';
+
 class About extends Component {
 
     constructor() {
@@ -12,8 +14,13 @@ class About extends Component {
     render() {
         return (
             <div className="about-section outer-container" id="about">
-                <div className="">
-
+                <div className="title">
+                {/* <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 2 }}
+                > */}
+                    <h2>Who Am I?</h2>
+                {/* </motion.div> */}
                 </div>
             </div>
         )

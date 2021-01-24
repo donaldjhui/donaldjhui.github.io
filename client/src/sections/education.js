@@ -10,7 +10,8 @@ class Education extends Component {
     }
 
     render() {
-        return <div className="education-section outer-container" id="education" />;
+        return <div className="education-section outer-container" id="education">
+        </div>;
     }
 }
 
