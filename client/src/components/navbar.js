@@ -46,6 +46,7 @@ export default class Navbar extends Component {
 
                 <div className="d-flex w-50 order-0">
 
+                    {/* navbar home icon */}
                     <div className="color-nav shadow">
 
                         <Link activeClass="active" to="home" spy={true} smooth={true} offset={1} duration={1500} className="grow navbar-brand">
@@ -64,8 +65,11 @@ export default class Navbar extends Component {
                     </span>
                 </button>
 
+                {/* navbar pages (collapse into navbar toggler when window is small) */}
                 <div className="navbar-collapse collapse shadow color-nav order-1" id="collapsingNavbar" aria-expanded="false" aria-controls="collapsingNavbar">
                     <ul className="navbar-nav">
+                        
+                        {/* each li consists of the individual categories on the website */}
                         <li className="nav-item">
                             <Link activeClass="active" to="about" spy={true} smooth={true} offset={1} duration={1500} className="grow nav-link">
                                 <navlabels>About</navlabels>

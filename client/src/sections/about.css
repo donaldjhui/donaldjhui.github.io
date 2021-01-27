@@ -1,6 +1,9 @@
-.title {
-  position: absolute;
+.flex-container-about {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-top {
+  flex: 50%;
   top: 50%;
-  left: 0;
-  width: 50vw;
 }
